@@ -3,6 +3,6 @@
 ## Setup
 
 ```sh
-chmod +x setup.sh
-./setup.sh
+curl --proto '=https' -sSf "https://pollenjp.github.io/ssh-pub-keys/setup.sh" \
+  | bash
 ```
