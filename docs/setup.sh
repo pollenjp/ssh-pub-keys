@@ -4,7 +4,7 @@ set -eu
 fetch_script_name="fetch-and-run.sh"
 target_script_path="${HOME}/.ssh/${fetch_script_name}"
 
-wget "https://pollenjp.github.io/ssh-pub-keys/${fetch_script_name}" \
+wget --quiet "https://pollenjp.github.io/ssh-pub-keys/${fetch_script_name}" \
     -O "${target_script_path}"
 chmod 744 "${target_script_path}"
 

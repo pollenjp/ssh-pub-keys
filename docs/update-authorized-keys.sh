@@ -9,7 +9,7 @@ touch "${keys_filepath}" && chmod 600 "${keys_filepath}"
 touch "${merged_keys_filepath}" && chmod 600 "${merged_keys_filepath}"
 touch "${authorized_keys_filepath}" && chmod 600 "${authorized_keys_filepath}"
 
-wget "https://pollenjp.github.io/ssh-pub-keys/keys.txt" \
+wget --quiet "https://pollenjp.github.io/ssh-pub-keys/keys.txt" \
     -O "${keys_filepath}"
 
 function extract() {
