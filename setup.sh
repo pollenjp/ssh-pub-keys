@@ -14,4 +14,4 @@ if crontab -l 2>/dev/null | grep -q "${fetch_script_name}"; then
     exit 0
 fi
 
-(crontab -l 2>/dev/null; echo '* */1 * * * * '"${target_script_path}") | crontab -
+(crontab -l 2>/dev/null; echo -e '* */1 * * * '"${target_script_path}") | crontab -
