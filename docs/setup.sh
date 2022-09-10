@@ -3,7 +3,7 @@ set -eu
 
 cargo install authorized-keys-merger
 
-fetch_script_name="fetch-ssh-keys.sh"
+fetch_script_name="fetch-and-run.sh"
 target_script_path="${HOME}/.ssh/${fetch_script_name}"
 
 wget "https://pollenjp.github.io/ssh-pub-keys/${fetch_script_name}" \
