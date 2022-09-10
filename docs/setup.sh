@@ -1,8 +1,6 @@
 #!/bin/bash
 set -eu
 
-cargo install authorized-keys-merger
-
 fetch_script_name="fetch-and-run.sh"
 target_script_path="${HOME}/.ssh/${fetch_script_name}"
 
