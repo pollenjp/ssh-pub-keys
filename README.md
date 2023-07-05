@@ -7,6 +7,12 @@ curl --proto '=https' -sSf "https://pollenjp.github.io/ssh-pub-keys/setup.sh" \
   | bash
 ```
 
+check by the next command
+
+```sh
+crontab -e
+```
+
 ## Developers
 
 You shouldn't change the filename `docs/fetch-and-run.sh`.
