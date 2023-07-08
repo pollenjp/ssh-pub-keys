@@ -2,8 +2,17 @@
 
 ## Setup
 
+- 以下のコマンドを実行して crontab を一度開いておく.
+- crontab を一度も開いていないと追記できない.
+
 ```sh
-curl --proto '=https' -sSf "https://pollenjp.github.io/ssh-pub-keys/setup.sh" \
+crontab -e
+```
+
+- ssh key を取得するコードを crontab に追加
+
+```sh
+curl --proto '=https' -sSf 'https://pollenjp.github.io/ssh-pub-keys/setup.sh' \
   | bash
 ```
 
