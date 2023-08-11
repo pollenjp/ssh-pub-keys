@@ -14,7 +14,9 @@ if crontab -l 2>/dev/null | grep -q "${fetch_script_name}"; then
 fi
 
 tmp_crontab_file="${HOME}/.ssh/crontab.edit"
-crontab -l > "${tmp_crontab_file}"
+if current_crontab="$( crontab -l 2> /dev/null )"; then
+    echo current_crontab > "${tmp_crontab_file}"
+fi
 echo '* */1 * * * '"${target_script_path}" >> "${tmp_crontab_file}"
 crontab "${tmp_crontab_file}"
 rm "${tmp_crontab_file}"
